@@ -71,8 +71,10 @@ authForm.addEventListener('submit', async (e) => {
 
     // > Part A:
     //      - get formData object from form
+    const formData = new FormData(authform);
     //      - call "authType.action" passing in the email and password from
     //        the form data and assign to response variable
+    const response = await authType.action(formData.get('email'), formData.get('password'));
 
     const error = response.error;
 
