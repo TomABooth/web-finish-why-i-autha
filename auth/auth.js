@@ -86,5 +86,6 @@ authForm.addEventListener('submit', async (e) => {
     } else {
         // go back to wherever user came from
         // > Part A using "location", replace url with "redirectUrl"
+        location.replace(redirectUrl);
     }
 });
